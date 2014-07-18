@@ -1,0 +1,12 @@
+<h3>What do you think about this line?</h3>
+
+<div id="movie_line">
+	<%= @line.content %>
+	-- <%= @line.movie %>
+</div>
+
+<form action="/comment_on_line" method="post">
+	<input type="hidden" name="line_id" value="<%= @line.id %>">
+	<textarea name="user_comment" placeholder="Add your comment!"></textarea>
+	<input type="submit" value="submit">
+</form>

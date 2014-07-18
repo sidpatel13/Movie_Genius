@@ -1,11 +1,8 @@
 get '/' do
-
-
   erb :index
 end
 
 get '/parse' do
-
 	i = Imdb::Movie.new("0119177")
  	@movie_synopsis = i.plot_synopsis
  	@each_line_array = []
