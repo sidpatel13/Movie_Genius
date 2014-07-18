@@ -2,6 +2,19 @@
 
   <h1>Welcome to Movie Genius!</h1>
 
+
+ 		
+		<% @movies.each do |movie|%>
+			
+			<h3><a href="/movies/<%= movie.id%>"><%= movie.title %></a></h3>
+
+		<% end %>
+
+
+
+
+	
+
   
 
 </div>
