@@ -1,8 +1,11 @@
 <h3>What do you think about this line?</h3>
 
+<!-- TESTING -->
+<% @movie = Movie.create(title: "Skyfall", synopsis: "he doesn't die in the first scene") %>
+<% @line = Line.create(text:"Bond - James Bond", movie_id: 1) %>
 <div id="movie_line">
-	<%= @line.content %>
-	-- <%= @line.movie %>
+	"<%= @line.text %>"<br/>
+	-- <%= "#{@line.movie.title}" %><br/>
 </div>
 
 <form action="/comment_on_line" method="post">
