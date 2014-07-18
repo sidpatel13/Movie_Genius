@@ -18,8 +18,14 @@ post '/signup' do
 end
 
 post '/login' do
-  @user = User.find_by(username: params[:username]).try(:authenticate, params[:password])
-  session[:user_id] = @user.id
+  @user = User.find_by_username(params[:username])
+  p @user
+  if @user && @user.authenticate(params[:password])
+    session[:user_id] = @user.id
+    redirect '/'
+  else
+    redirect '/signup_login'
+  end
 end
 
 post '/logout' do
