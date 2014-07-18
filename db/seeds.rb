@@ -1,3 +1,4 @@
+meh = User.create(username:"molly", password:"1234q")
 
 a = Imdb::Movie.new("0075314") # Taxi Driver
 
