@@ -21,3 +21,8 @@ post '/login' do
   @user = User.find_by(username: params[:username]).try(:authenticate, params[:password])
   session[:user_id] = @user.id
 end
+
+post '/logout' do
+  session[:user_id] = nil
+  redirect '/'
+end
