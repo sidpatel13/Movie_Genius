@@ -5,9 +5,18 @@ get '/signup_login' do
 end
 
 post '/signup' do
-  User.create(username: new_user[:username], email: new_user[:email], password: new_user[:password])
+  p params
+  p params[:new_user]
+  @user = User.create(params[:new_user])
+  # MEH - don't understand this line (via Sid)
+  if @user.save
+    session[:user_id] = @user_id
+    redirect '/'
+  else
+    redirect '/signup_login'
+  end
 end
 
-post '/login' do
-  User.find_by(username: user[:username]).try(:authenticate, user[:password])
-end
+# post '/login' do
+#   User.find_by(username: user[:username]).try(:authenticate, user[:password])
+# end
