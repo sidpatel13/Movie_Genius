@@ -3,6 +3,8 @@
 <!-- TESTING -->
 <% @movie = Movie.create(title: "Skyfall", synopsis: "he doesn't die in the first scene") %>
 <% @line = Line.create(text:"Bond - James Bond", movie_id: 1) %>
+<!-- END TESTING -->
+
 <div id="movie_line">
 	"<%= @line.text %>"<br/>
 	-- <%= "#{@line.movie.title}" %><br/>
