@@ -18,16 +18,18 @@
   <title></title>
 </head>
 <body>
+  <a href="/">Home</a>
   <header>
     <% if session[:user_id].nil? %>
-    <% puts "no user" %>
-    <%= erb :_no_user_logged_in %>
-  <% else %>
-    <%= erb :_user_logged_in %>
-    <form action="/logout" method="post">
-      <input type="submit" value="Logout">
-    </form>
-  <% end %>
+      <% puts "no user" %>
+      <%= erb :_no_user_logged_in %>
+    <% else %>
+      <%= erb :_user_logged_in %>
+      <form action="/logout" method="post">
+        <input type="submit" value="Logout">
+      </form>
+    <% end %>
+
 </header>
   <%= yield %>
 </body>
