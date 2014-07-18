@@ -10,7 +10,9 @@ post '/signup' do
   @user = User.create(params[:new_user])
   # MEH - don't understand this line (via Sid)
   if @user.save
-    session[:user_id] = @user_id
+    # p @user.id
+    session[:user_id] = @user.id
+    p session
     redirect '/'
   else
     redirect '/signup_login'
