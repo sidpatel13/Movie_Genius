@@ -1,4 +1,4 @@
-helper do 
+helpers do 
 
   def current_user
     if session[:user_id]
