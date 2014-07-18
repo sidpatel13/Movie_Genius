@@ -1,5 +1,4 @@
 get '/' do
-
 	@movies = Movie.all
   erb :index
 end
