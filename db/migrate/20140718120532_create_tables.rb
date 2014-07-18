@@ -1,12 +1,13 @@
 class CreateTables < ActiveRecord::Migration
   def change
     create_table :users do |t|
-      t.string :username, :password
+      t.string :username, :password_digest
       t.timestamps
     end
 
     create_table :movies do |t|
       t.string :title
+      t.text :synopsis
       t.timestamps
     end
 
@@ -18,7 +19,7 @@ class CreateTables < ActiveRecord::Migration
 
     create_table :comments do |t|
       t.text :text
-      t.integer :vote_count
+      t.integer :vote_count, default: 0
       t.references :line
       t.references :user
       t.timestamps

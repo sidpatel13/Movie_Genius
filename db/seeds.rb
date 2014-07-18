@@ -1,5 +1,11 @@
 
 a = Imdb::Movie.new("0075314") # Taxi Driver
+
+
+# user = User.create(username: "sidpatel", password: "password")
+# user.comments.create(text: "yo what it is" )
+
+
 Movie.create(title: a.title, synopsis: a.plot_synopsis)
 
 b = Imdb::Movie.new("0119177") # Gattaca
