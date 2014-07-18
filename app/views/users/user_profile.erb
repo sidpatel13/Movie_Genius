@@ -1,0 +1,12 @@
+<h2>Hey <%=@current_user.name%> </h2> 
+
+<h3>View Your Comments Below</h3>
+
+
+<p>
+  <% @user.comments.each do |comment|%> <!-- make sorted comments attribute? -->
+    <%= comment %> <br/>
+    <a href="#">Edit</a> <a href="#">Delete</a> 
+  <% end %>
+</p>
+
