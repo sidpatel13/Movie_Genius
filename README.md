@@ -31,8 +31,4 @@ I want to upvote and downvote a comment.
 
 
 
- <% @movies.each do |movie|%>
-		
-		<h3><%= movie.title %></h3>
-
-	<% end %>
+ 
