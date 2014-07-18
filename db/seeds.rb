@@ -1,3 +1,4 @@
+meh = User.create(username:"molly", password:"1234q")
 
 
 
@@ -66,7 +67,9 @@ i_movie.synopsis.split(".").each do |line|
 end
 
 j = Imdb::Movie.new("0133093") #The Matrix
+
 j_movie = Movie.create(title: j.title, synopsis: j.plot_synopsis)
 j_movie.synopsis.split(".").each do |line|
 	j_movie.lines << Line.create(text: line)
 end
+

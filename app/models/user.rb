@@ -3,6 +3,4 @@ class User < ActiveRecord::Base
   validates :username, uniqueness: true
   has_many :comments
   # Remember to create a migration!
-
-
 end
