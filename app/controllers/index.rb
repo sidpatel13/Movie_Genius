@@ -7,7 +7,6 @@ get '/' do
  		@each_line_array << line
  	end
 
- 	@each_line_array
 
   erb :index
 end
