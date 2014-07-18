@@ -1,6 +1,6 @@
 get '/' do
- 	i = Imdb::Movie.new("0181875")
- 	@movie_title = i.plot_synopsis
+ 	i = Imdb::Movie.new("0133093")
+ 	@movie_synopsis = i.plot_synopsis
 
 
   erb :index
