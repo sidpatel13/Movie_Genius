@@ -5,8 +5,7 @@ get '/signup_login' do
 end
 
 post '/signup' do
-  p params
-  p params[:new_user]
+ 
   @new_user = User.create(params[:new_user])
   # MEH - don't understand this line (via Sid)
   if @new_user.save

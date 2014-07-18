@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
   has_secure_password
-  validates :email, uniqueness: true
   validates :username, uniqueness: true
+  has_many :comments
+  # Remember to create a migration!
+
+
 end
