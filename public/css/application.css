@@ -2,6 +2,16 @@ a {
   font-family: "Raleway", sans-serif;
 }
 
+a:hover {
+	color:red;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.comments {
+    font-family: "Raleway", sans-serif;
+}
+
 
 .container {
   margin: 20px auto;
