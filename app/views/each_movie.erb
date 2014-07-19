@@ -1,7 +1,6 @@
 <br>
-<% @movie.lines.each do |line| %>
-	
-	<a href="/comment_on_line/<%= line.id %>"><%= line.text %></a><br><br>
-	 
+<% @movie.lines.each do |line| %>	
+  <a href="/comment_on_line/<%= line.id %>"><%= line.text %></a>
+  <br><br>
 <% end %>
 	
