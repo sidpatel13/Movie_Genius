@@ -1,5 +1,3 @@
-require 'faker'
-
 meh = User.create(username:"molly", password:"1234q")
 
 ### generate Random Users for Diverse Comments

@@ -10,5 +10,23 @@
 		<% end %>  
 
 		<h3>Top Comments:</h3>
+		
+
+		<table>
+			<tr>
+				<th>Comment Text</th>
+				<th>Movie Title</th>
+				<th>Vote Count</th>
+			</tr>
+			<% @top_comments.each do |comment|%>
+				<tr>
+					<td><%= comment.text %></td>
+					<td><%= comment.line.movie.title %></td>
+					
+					<td><%= comment.vote_count%></td>
+				</tr>
+			<% end %>  
+
+		</table>
 
 </div>
