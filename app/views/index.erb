@@ -21,7 +21,7 @@
 			<% @top_comments.each do |comment|%>
 				<tr>
 					<td><%= comment.text %></td>
-					<td><%= comment.line.movie.title %></td>
+					<td><a href="/movies/<%= comment.line.movie.id%>"><%= comment.line.movie.title %></a></td>
 					
 					<td><%= comment.vote_count%></td>
 				</tr>
