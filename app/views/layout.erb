@@ -19,7 +19,7 @@
   <title></title>
 </head>
 <body>
-
+  <a href="/">Home</a>  
   <header>
     <% if session[:user_id].nil? %>
       <% puts "no user" %>
@@ -31,18 +31,7 @@
       </form>
     <% end %>
 
-  </header>
-  
-  <nav>
-      <a href="/">Home</a>  
-
-    
-
-  </nav>
-
-    <%= yield %>
-
-
-
+</header>
+  <%= yield %>
 </body>
 </html>
