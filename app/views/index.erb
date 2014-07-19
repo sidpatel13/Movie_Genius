@@ -2,10 +2,13 @@
 
   <h1>Welcome to Movie Genius!</h1>
  		
+		<h3>Top Movies:</h3>
 		<% @movies.each do |movie|%>
 			
 			<h3><a href="/movies/<%= movie.id%>"><%= movie.title %></a></h3>
 
 		<% end %>  
+
+		<h3>Top Comments:</h3>
 
 </div>
