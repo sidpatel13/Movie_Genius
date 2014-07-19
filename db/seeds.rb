@@ -1,4 +1,4 @@
-meh = User.create(username:"molly", password:"1234q")
+meh = User.create(username:"molly", password:"1234q", email:"mary.huerster@gmail.com")
 
 
 
