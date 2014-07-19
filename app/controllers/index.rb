@@ -1,6 +1,5 @@
 get '/' do
 	@movies = Movie.all
-	@top_comments = Comment.all.order(vote_count: :desc).limit(5)
   erb :index
 end
 
