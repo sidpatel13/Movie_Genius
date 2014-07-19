@@ -1,5 +1,5 @@
-get '/comment_on_line' do
-	# @line = line
+get '/comment_on_line/:id' do
+	@line = Line.find(params[:id])
 	erb :comment_on_line
 end
 

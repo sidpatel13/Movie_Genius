@@ -1,17 +1,13 @@
 <h3>What do you think about this line?</h3>
 
-<!-- TESTING -->
-<% @movie = Movie.create(title: "Skyfall", synopsis: "he doesn't die in the first scene") %>
-<% @line = Line.create(text:"Bond - James Bond", movie_id: 1) %>
-<!-- END TESTING -->
 
 <div id="movie_line">
-	"<%= @line.text %>"<br/>
-	-- <%= "#{@line.movie.title}" %><br/>
+	"<%= @line.text %>"<br><br>
+	-- <%= "#{@line.movie.title}" %><br><br>
 </div>
 
 <form action="/comment_on_line" method="post">
 	<input type="hidden" name="line_id" value="<%= @line.id %>">
-	<textarea name="user_comment" placeholder="Add your comment!"></textarea>
+	<textarea name="user_comment" placeholder="Add your comment!"></textarea><br><br>
 	<input type="submit" value="submit">
 </form>

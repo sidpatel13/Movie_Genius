@@ -7,6 +7,7 @@
     See: http://necolas.github.com/normalize.css/
   -->
   <link rel="stylesheet" href="/css/normalize.css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   <!--
     application.css is where you put your styles
   -->
@@ -22,9 +23,9 @@
   <header>
     <% if session[:user_id].nil? %>
       <% puts "no user" %>
-      <%= erb :_no_user_logged_in %>
+      <a class="top_nav" href="/signup_login">Log in or create an account</a>
     <% else %>
-      <%= erb :_user_logged_in %>
+      <span>Welcome, <%= User.find(session[:user_id]).username %>!</span>
       <form action="/logout" method="post">
         <input type="submit" value="Logout">
       </form>
