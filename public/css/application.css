@@ -2,6 +2,9 @@ a {
   font-family: "Raleway", sans-serif;
 }
 
+.nav{
+  display: inline;
+}
 
 .container {
   margin: 20px auto;
@@ -11,4 +14,16 @@ a {
 }
 th {
   text-align: left;
+}
+
+table {
+  margin: 0 5%;
+}
+table th {
+  border-bottom: 3px black solid;
+  text-align: center;
+}
+table td {
+  border-bottom: 1px black solid;
+  padding: 0.5em 0.25em;
 }

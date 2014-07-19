@@ -19,13 +19,13 @@
   <title></title>
 </head>
 <body>
-  <a href="/">Home</a>  
+  <a href="/" class="nav">Home</a>
   <header>
     <% if session[:user_id].nil? %>
       <% puts "no user" %>
       <a class="top_nav" href="/signup_login">Log in or create an account</a>
     <% else %>
-      <span>Welcome, <%= User.find(session[:user_id]).username %>!</span>
+      <span class="nav">Welcome, <a href="/user/<%= session[:user_id] %>"><%= User.find(session[:user_id]).username %></a>!</span>
       <form action="/logout" method="post">
         <input type="submit" value="Logout">
       </form>
