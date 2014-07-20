@@ -150,5 +150,15 @@ article {
   padding-left: 10px;
 }
 
+.commentsPage {
+  text-align: center;
+  padding-top: 1px;
+}
+
+
+textarea {
+  height: 125px;
+  width: 425px;
+}
 
 
