@@ -21,16 +21,18 @@
 		<table>
 			<tr>
 				<th>Comment Text</th>
+				<th>Line Text</th>
 				<th>Movie Title</th>
 				<th>Vote Count</th>
 				<th>Comment Author</th>
 			</tr>
 			<% @top_comments.each do |comment|%>
 				<tr>
-					<td><%= comment.text %></td>
+					<td><a href="/comments/<%= comment.id %>"><%= comment.text %></a></td>
+					<td><a href="/comment_on_line/<%= comment.line.id %>"><%= comment.line.text %></a></td>
 					<td><a href="/movies/<%= comment.line.movie.id%>"><%= comment.line.movie.title %></a></td>
 					<td><%= comment.vote_count%></td>
-					<td><%= comment.user.username %></td>
+					<td><%= comment.user %></td>
 				</tr>
 			<% end %>
 
