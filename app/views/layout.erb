@@ -19,28 +19,41 @@
   <title></title>
 </head>
 <body>
-
-  <header>
+  <nav>
+    <div id="logo">
+      <a href="/">MOVIE GENIUS</a> 
+    </div>
+    <div id="navSession">
     <% if session[:user_id].nil? %>
       <% puts "no user" %>
-      <a class="top_nav" href="/signup_login">Log in or create an account</a>
-    <% else %>
-      <span>Welcome, <%= User.find(session[:user_id]).username %>!</span>
-      <form action="/logout" method="post">
-        <input type="submit" value="Logout">
+      <form action="/signup_login" method="link">
+        <input type="submit" value="SIGN UP" class="button"> &nbsp
+        
+        <input type="submit" value="LOG IN" class="button">
+      </div>
       </form>
+    <% else %>
+      <div id="loggedIn">
+      <span>Welcome, <%= User.find(session[:user_id]).username %>!</span><br/>
+      <form action="/logout" method="post">
+        <input type="submit" value="LOGOUT" class="button">
+      </form>
+    </div>
     <% end %>
-
-  </header>
-  
-  <nav>
-      <a href="/">Home</a>  
-
-    
-
   </nav>
+  
 
+  <div class="container">
     <%= yield %>
+  </div>
+
+  <footer>
+    <div id="footerLeft">
+    <a href="https://github.com/sidpatel13/Movie_Genius"><img src="/images/github.png" class="icon"></a></div>
+    <div id="footerRight"><h3><a href="/about_us">ABOUT US </a></h3></div>
+  </footer>
+
+
 
 
 
