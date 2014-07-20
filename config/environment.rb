@@ -11,6 +11,7 @@ require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 require 'rubygems'
 require 'imdb'
 require 'bcrypt'
+require 'spotlite'
 
 
 require 'uri'
