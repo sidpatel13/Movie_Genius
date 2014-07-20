@@ -13,8 +13,18 @@ end
 get '/comments/:id' do
 	@comment = Comment.find(params[:id])
 	@movie = @comment.line.movie
-
+	@vote_before = @comment.vote_count
 
 
   erb :specific_comment
+end
+
+post '/votes/:id' do
+
+	@comment = Comment.find(params[:id])
+	@comment.vote_count += 1
+	@comment.save
+		
+
+	redirect "/comment_on_line/#{@comment.line.id}"
 end

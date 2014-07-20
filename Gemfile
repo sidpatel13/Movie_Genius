@@ -2,7 +2,10 @@ source 'https://rubygems.org'
 
 # PostgreSQL driver
 gem 'pg'
+
+# IMDB + spotlite to search new titles
 gem 'imdb'
+gem 'spotlite'
 
 
 

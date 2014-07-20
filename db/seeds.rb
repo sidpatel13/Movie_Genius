@@ -1,14 +1,10 @@
-meh = User.create(username:"molly", password:"1234q")
+meh = User.create(username:"molly", password:"1234q", email_address: "mary.huerster@gmail.com", full_name: "Molly")
 
 ### generate Random Users for Diverse Comments
 
 100.times do
-	User.create(username: Faker::Name.name, password: (rand(10).to_s + Faker::Lorem.word + rand(10).to_s))
+	User.create(username: Faker::Internet.user_name, password: (rand(10).to_s + Faker::Lorem.word + rand(10).to_s), full_name: Faker::Name.name, email_address: Faker::Internet.free_email)
 end
-
-# user = User.create(username: "sidpatel", password: "password")
-# user.comments.create(text: "yo what it is" )
-
 
 a = Imdb::Movie.new("0075314") # Taxi Driver
 a_movie = Movie.create(title: a.title, synopsis: a.plot_synopsis)
@@ -53,8 +49,8 @@ j_movie = Movie.create(title: j.title, synopsis: j.plot_synopsis)
 
 ##### SEED COMMENTS
 
-100.times do 
-	Comment.create(text: Faker::Lorem.sentence, vote_count: (rand(100)- 50), line_id: rand(1250), user_id: rand(100)) 
+100.times do
+	Comment.create(text: Faker::Lorem.sentence, vote_count: (rand(100)- 50), line_id: rand(1250), user_id: rand(100))
 end
 
 
