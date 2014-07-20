@@ -1,4 +1,3 @@
-<p>hello world!</p>
 
 <h3>Which one is the movie you want to show your genius on?</h3>
 	
@@ -10,7 +9,7 @@
 		<% @movies.each do |movie|  %>
 			<tr>
 				<th><a href="/movies/new/<%= movie.imdb_id%>"><%= movie.title%></a></th>
-				<th><a href="<%= movie.url%>">Chekc the IMDB link!</a></th>
+				<th><a href="<%= movie.url%>">Check the IMDB link!</a></th>
 			</tr>
 		<% end %>
 	</table>

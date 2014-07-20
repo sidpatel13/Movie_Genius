@@ -10,4 +10,10 @@ get '/movies/new-title-search/:title' do
 	erb :new_title_search_results
 end
 
-# get '/movies/new/:id'
+get '/movies/new/:id' do 
+	new_movie = Imdb::Movie.new(params[:id]) 
+	Movie.create(title: new_movie.title, synopsis: new_movie.plot_synopsis)
+	redirect '/'
+end
+
+
