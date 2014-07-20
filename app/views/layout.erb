@@ -19,34 +19,21 @@
   <title></title>
 </head>
 <body>
-<<<<<<< HEAD
 
-=======
-  <a href="/" class="nav">Home</a>
->>>>>>> d5c7e442c13eb8a41e01e7e0885aa2e03c43aa06
-  <header>
+  <nav>
+    <a href="/">Home</a>
     <% if session[:user_id].nil? %>
       <% puts "no user" %>
-      <a class="top_nav" href="/signup_login">Log in or create an account</a>
+      <a class="nav" href="/signup_login">Log in or create an account</a>
     <% else %>
-      <span class="nav">Welcome, <a href="/user/<%= session[:user_id] %>"><%= User.find(session[:user_id]).username %></a>!</span>
+      <span class="nav">Welcome, <a href="/user/<%= session[:user_id] %>"><%= User.find(session[:user_id]).full_name.capitalize %></a>!</span>
       <form action="/logout" method="post">
         <input type="submit" value="Logout">
       </form>
     <% end %>
-
-  </header>
-  
-  <nav>
-      <a href="/">Home</a>  
-
-    
-
   </nav>
 
     <%= yield %>
-
-
 
 </body>
 </html>
