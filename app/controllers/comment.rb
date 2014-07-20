@@ -18,3 +18,11 @@ get '/comments/:id' do
 
   erb :specific_comment
 end
+
+get '/votes/:id' do
+	@comment = Comment.find(params[:id])
+	@comment.vote_count += 1
+	@comment.save
+
+	redirect "/comments/#{@comment.id}"
+end

@@ -2,6 +2,7 @@ a {
   font-family: "Raleway", sans-serif;
 }
 
+<<<<<<< HEAD
 a:hover {
 	color:red;
 	font-weight: bold;
@@ -12,6 +13,11 @@ a:hover {
     font-family: "Raleway", sans-serif;
 }
 
+=======
+.nav{
+  display: inline;
+}
+>>>>>>> d5c7e442c13eb8a41e01e7e0885aa2e03c43aa06
 
 .container {
   margin: 20px auto;
@@ -21,4 +27,16 @@ a:hover {
 }
 th {
   text-align: left;
+}
+
+table {
+  margin: 0 5%;
+}
+table th {
+  border-bottom: 3px black solid;
+  text-align: center;
+}
+table td {
+  border-bottom: 1px black solid;
+  padding: 0.5em 0.25em;
 }
