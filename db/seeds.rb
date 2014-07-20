@@ -1,9 +1,9 @@
-meh = User.create(username:"molly", password:"1234q", email_address: "molly@gmail", full_name: "Molly")
+meh = User.create(username:"molly", password:"1234q", email_address: "mary.huerster@gmail.com", full_name: "Molly")
 
 ### generate Random Users for Diverse Comments
 
 100.times do
-	User.create(username: Faker::Name.name, password: (rand(10).to_s + Faker::Lorem.word + rand(10).to_s))
+	User.create(username: Faker::Internet.user_name, password: (rand(10).to_s + Faker::Lorem.word + rand(10).to_s), full_name: Faker::Name.name, email_address: Faker::Internet.free_email)
 end
 
 # user = User.create(username: "sidpatel", password: "password")
