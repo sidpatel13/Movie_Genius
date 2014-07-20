@@ -1,7 +1,13 @@
 <p>hello world!</p>
 
-<% @movies.each do |movie|  %>
+<h3>Which one is the movie you want to show your genius on?</h3>
+	
+	<table>
+		<% @movies.each do |movie|  %>
 
-<p><%= movie.title%></p>
+			<p><%= movie.title%></p>
+			<p><%= movie.imdb_id%></p>
+			<p><%= movie.url%></p>
 
-<% end %>
+		<% end %>
+	</table>

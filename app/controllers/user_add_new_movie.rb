@@ -6,6 +6,8 @@ end
 
 get '/movies/new-title-search/:title' do
 	@movies = Spotlite::Movie.find(params[:title])
-	
+
 	erb :new_title_search_results
 end
+
+# get '/movies/new/:id'
