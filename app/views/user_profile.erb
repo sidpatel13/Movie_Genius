@@ -1,0 +1,23 @@
+<h3>Your Profile</h3>
+
+<% p current_user %>
+
+<h4>Your username: <%= @current_user.username %> </h2>
+
+  <image class="profile" src="http://www.gravatar.com/avatar/<%=gravatar_hash(@current_user.email_address)%>">
+<h4>Your comments:</h4>
+
+<table>
+<tr>
+  <th>Movie</th>
+  <th>Line</th>
+  <th>Your Comment</th>
+</tr>
+<% @current_user.comments.each do |comment| %>
+<tr>
+  <td><%= comment.line.movie.title %></td>
+  <td><%= comment.line.text %></td>
+  <td><%= comment.text %></td>
+</tr>
+<% end %>
+</table>
