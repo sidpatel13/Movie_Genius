@@ -1,0 +1,10 @@
+<h2>Is this what you were looking for?</h2>
+
+<ul>
+<% @user_movie.movies.first(10).each do |movie| %>
+    <!-- <img src="<%= movie.poster %>"> -->
+    <li><%= movie.title %></li>
+  <% end %>
+</ul>
+
+Click on any of the links above to add the movie. If you don't see what you wanted, try a more specific search.
