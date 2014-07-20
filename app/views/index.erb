@@ -1,32 +1,37 @@
-<div class="container">
+  
+  <div class="welcome">
+  	<img src="images/projector.png" id="projector" id="projector"> 
+    <h1>Welcome to Movie Genius!</h1>
+  </div>
 
-  <h1>Welcome to Movie Genius!</h1>
  		
-		<h3>Top Movies:</h3>
+		<h3><u>Top Movies:</u></h3>
+		<div class="topMovies">
 		<% @movies.each do |movie|%>
-			
-			<h3><a href="/movies/<%= movie.id%>"><%= movie.title %></a></h3>
-
+		
+		
+			<a href="/movies/<%= movie.id%>"><%= movie.title %><br/></a>
+    
 		<% end %>  
+	</div>
 
-		<h3>Top Comments:</h3>
+		<h3><u>Top Comments:</u></h3>
 		
 
 		<table>
 			<tr>
-				<th>Comment Text</th>
-				<th>Movie Title</th>
-				<th>Vote Count</th>
+				<th><u>Comment Text</u></th>
+				<th><u>Movie Title</u></th>
+				<th><u>Vote Count</u></th>
 			</tr>
 			<% @top_comments.each do |comment|%>
 				<tr>
-					<td><%= comment.text %></td>
+					<td class="commentText"><%= comment.text %></td>
 					<td><a href="/movies/<%= comment.line.movie.id%>"><%= comment.line.movie.title %></a></td>
 					
-					<td><%= comment.vote_count%></td>
+					<td class="voteCount"><%= comment.vote_count%></td>
 				</tr>
 			<% end %>  
 
 		</table>
 
-</div>
