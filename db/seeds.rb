@@ -1,4 +1,4 @@
-meh = User.create(username:"molly", password:"1234q")
+meh = User.create(username:"molly", password:"1234q", email_address: "molly@gmail", full_name: "Molly")
 
 ### generate Random Users for Diverse Comments
 
@@ -53,8 +53,8 @@ j_movie = Movie.create(title: j.title, synopsis: j.plot_synopsis)
 
 ##### SEED COMMENTS
 
-100.times do 
-	Comment.create(text: Faker::Lorem.sentence, vote_count: (rand(100)- 50), line_id: rand(1250), user_id: rand(100)) 
+100.times do
+	Comment.create(text: Faker::Lorem.sentence, vote_count: (rand(100)- 50), line_id: rand(1250), user_id: rand(100))
 end
 
 
