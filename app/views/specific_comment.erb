@@ -1,8 +1,12 @@
-<div class="comments">
+<div class= "votes">
 <br>
 Comment for: <a href= "/movies/<%= @movie.id %>"><%= @movie.title %></a> <br><br>
 "<%= @comment.text.capitalize %>" <br><br>
-<a href="/votes/<%= @comment.id %>"><input id="submit" type="submit" value="Vote up!"></a> 
-Total Vote Count: <%= @comment.vote_count %>
- 
+
+<form action="/votes/<%= @comment.id %>" method="POST">
+ <input type="submit" value="Vote up!">
+Total Vote Count: <span><%= @comment.vote_count %></span>
+</form> 
+
+
 </div>
