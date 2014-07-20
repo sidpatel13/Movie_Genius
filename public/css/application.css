@@ -37,7 +37,7 @@ nav {
   text-align: center;
 }
 
-.navButton  {
+.button  {
   background: linear-gradient(to bottom, gray, #000);
   border: 1px solid white;
   color: #ffc31c;
@@ -136,6 +136,11 @@ footer {
   height: 85px;
 }
 
+.signUpPage {
+  text-align: center;
+  margin-top: -5px;
+  padding-top: 25px;
+}
 
 
 
