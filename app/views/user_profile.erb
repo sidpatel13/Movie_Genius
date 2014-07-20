@@ -2,9 +2,6 @@
 
 <% @user = User.find(params[:id]) %>
 
-<% puts "Logged in: #{current_user}" %>
-<% puts "Viewing: #{@user}" %>
-
 <h3><%= @user.username %> (<%= @user.full_name.capitalize %>)</h3>
 
 <image class="profile" src="http://www.gravatar.com/avatar/<%=gravatar_hash(@user.email_address)%>">
@@ -15,12 +12,14 @@
   <th>Movie</th>
   <th>Line</th>
   <th>This User's Comments:</th>
+  <th>Vote Count</th>
 </tr>
 <% @user.comments.each do |comment| %>
-<tr>
-  <td><%= comment.line.movie.title %></td>
-  <td><%= comment.line.text %></td>
-  <td><%= comment.text %></td>
-</tr>
+  <tr>
+    <td><%= comment.line.movie.title %></td>
+    <td><%= comment.line.text %></td>
+    <td><%= comment.text %></td>
+    <td><%= comment.vote_count %></td>
+  </tr>
 <% end %>
 </table>
