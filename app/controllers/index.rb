@@ -9,6 +9,11 @@ get '/movies/:id' do
 	erb :each_movie
 end
 
+get '/about_us' do 
+  erb :about_us
+end
+
 get '/user/:id' do
   erb :user_profile
 end
+

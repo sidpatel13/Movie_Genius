@@ -1,15 +1,170 @@
+body {
+  background-color: #ffc31c;
+}
+
+.comment_text {
+  list-style:none;
+}
+
+nav {
+  width: 1000px;
+  background-color: black;
+  margin: auto;
+  height: 100px;
+  color: #ffc31c;
+}
+
+#logo {
+  float: left;
+  font-size: 4.2em;
+  padding-left: 60px;
+  padding-top: 11px;
+  width: 600px;
+  letter-spacing: .2em;
+  text-align: center;
+}
+
+#logo a {
+  text-decoration: none;
+  color: #ffc31c;
+  font-family: monospace;
+}
+
+
+#navSession {
+  float: right;
+  width: 300px;
+  padding-top: 38px;
+}
+
+#loggedIn {
+  text-align: center;
+}
+
+.button  {
+  background: linear-gradient(to bottom, gray, #000);
+  border: 1px solid white;
+  color: #ffc31c;
+  height: 35px;
+  width: 135px;
+  font-size: 13px;
+}
+
+.container {
+  width: 1000px;
+  margin: auto;
+  color: #ffc31c;
+  background-image: url("/images/background.jpg");
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+.welcome {
+  display: inline-flex;
+  margin-left: 160px;
+}
+
+h1 {
+  text-align: center;
+  font-family: monospace;
+  font-size: 3em;
+  padding-top: 15px;
+}
+
+h3 {
+  text-align: center;
+  font-size: 2em;
+}
+
 a {
   font-family: "Raleway", sans-serif;
+  color: #ffc31c;
+  text-decoration: none;
 }
 
 a:hover {
-	color:red;
-	font-weight: bold;
-	text-decoration: none;
+  color: white;
 }
 
-.comments {
-    font-family: "Raleway", sans-serif;
+.topMovies {
+  font-size: 1.5em;
+  line-height: 40px;
+  padding-left: 50px;
+}
+
+
+table {
+  margin-left: 50px;
+  margin-top: 52px;
+  text-align: left;
+}
+
+.voteCount {
+  text-align: center;
+}
+
+.commentText {
+  padding-right: 10px;
+}
+
+footer {
+  margin-top: 10px;
+  width: 1000px;
+  background-color: black;
+  margin: auto;
+  height: 100px;
+  color: #ffc31c;
+  display: flex;
+  text-align: center;
+}
+
+#projector {
+  text-align: center;
+  height: 125px;
+}
+
+#footerLeft {
+  margin-left: 45px;
+  margin-top: 10px;
+}
+
+#footerRight {
+  margin-left: 600px;
+}
+
+.icon {
+  height: 85px;
+}
+
+.signUpPage {
+  text-align: center;
+  margin-top: -5px;
+  padding-top: 25px;
+}
+
+input {
+  height: 30px;
+}
+
+article {
+  padding-left: 10px;
+}
+
+.commentsPage {
+  text-align: center;
+  padding-top: 1px;
+}
+
+
+textarea {
+  height: 125px;
+  width: 425px;
+}
+
+.specificComment {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
 }
 
 

@@ -1,13 +1,13 @@
-<div class="container">
 
-  <h1>Welcome to Movie Genius!</h1>
 
 		<h3>Top Movies:</h3>
+		<div class="topMovies">
 		<% @movies.each do |movie|%>
 
 			<h3><a href="/movies/<%= movie.id%>"><%= movie.title %></a></h3>
 
 		<% end %>
+	   </div>
 
 		<h4>Don't see the movie you're a genius for? Add it to our DB!</h4>
 		<form action="/movies/new-title-search" method="post">
@@ -28,9 +28,9 @@
 			</tr>
 			<% @top_comments.each do |comment|%>
 				<tr>
-					<td><a href="/comments/<%= comment.id %>"><%= comment.text %></a></td>
+					<td class="commentText"><a href="/comments/<%= comment.id %>"><%= comment.text %></a></td>
 					<td><a href="/comment_on_line/<%= comment.line.id %>"><%= comment.line.text %></a></td>
-					<td><a href="/movies/<%= comment.line.movie.id%>"><%= comment.line.movie.title %></a></td>
+					<td class="voteCount" ><a href="/movies/<%= comment.line.movie.id%>"><%= comment.line.movie.title %></a></td>
 					<td><%= comment.vote_count%></td>
 					<td><%= comment.user %></td>
 				</tr>
@@ -38,4 +38,3 @@
 
 		</table>
 
-</div>
