@@ -1,4 +1,4 @@
-get '/movie/add' do
+get '/find_movie' do
   erb :add_movie
 end
 
