@@ -51,15 +51,21 @@ nav {
   margin: auto;
   color: #ffc31c;
   background-image: url("/images/background.jpg");
-  margin-top: -15px;
+  margin-top: 15px;
   margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+.welcome {
+  display: inline-flex;
+  margin-left: 160px;
 }
 
 h1 {
   text-align: center;
   font-family: monospace;
   font-size: 3em;
-  padding-top: 30px;
+  padding-top: 15px;
 }
 
 h3 {
@@ -102,13 +108,34 @@ table {
 }
 
 footer {
-
   margin-top: 10px;
   width: 1000px;
   background-color: black;
   margin: auto;
   height: 100px;
   color: #ffc31c;
+  display: flex;
+  text-align: center;
 }
+
+#projector {
+  text-align: center;
+  height: 125px;
+}
+
+#footerLeft {
+  margin-left: 45px;
+  margin-top: 10px;
+}
+
+#footerRight {
+  margin-left: 600px;
+}
+
+.icon {
+  height: 85px;
+}
+
+
 
 
