@@ -2,5 +2,7 @@
 <br>
 Comment for: <a href= "/movies/<%= @movie.id %>"><%= @movie.title %></a> <br><br>
 "<%= @comment.text.capitalize %>" <br><br>
-<input type="submit" value="Vote up!">
+<a href="/votes/<%= @comment.id %>"><input id="submit" type="submit" value="Vote up!"></a> 
+Total Vote Count: <%= @comment.vote_count %>
+ 
 </div>
