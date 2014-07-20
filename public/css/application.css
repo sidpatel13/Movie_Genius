@@ -142,5 +142,13 @@ footer {
   padding-top: 25px;
 }
 
+input {
+  height: 30px;
+}
+
+article {
+  padding-left: 10px;
+}
+
 
 
