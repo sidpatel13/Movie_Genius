@@ -1,3 +1,7 @@
+body {
+  
+}
+
 nav {
   width: 1000px;
   background-color: black;
@@ -29,6 +33,10 @@ nav {
   padding-top: 38px;
 }
 
+#loggedIn {
+  text-align: center;
+}
+
 .navButton  {
   background: linear-gradient(to bottom, gray, #000);
   border: 1px solid white;
@@ -40,12 +48,19 @@ nav {
 
 .container {
   width: 1000px;
-  border: 1px solid black;
   margin: auto;
+  color: #ffc31c;
+  background-image: url("/images/background.jpg");
+  margin-top: -21px;
+}
+
+h1 {
+  text-align: center;
 }
 
 a {
   font-family: "Raleway", sans-serif;
+  color: #ffc31c;
 }
 
 
