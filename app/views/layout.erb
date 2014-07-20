@@ -19,8 +19,11 @@
   <title></title>
 </head>
 <body>
-
-  <header>
+  <nav>
+    <div id="logo">
+      <a href="/"><span class="movie">MOVIE</span> <br/> GENIUS</a> 
+    </div>
+    <div id="navSession">
     <% if session[:user_id].nil? %>
       <% puts "no user" %>
       <a class="top_nav" href="/signup_login">Log in or create an account</a>
@@ -30,17 +33,10 @@
         <input type="submit" value="Logout">
       </form>
     <% end %>
-
-  </header>
-  
-  <nav>
-      <a href="/">Home</a>  
-
-    
-
+  </div>
   </nav>
 
-    <%= yield %>
+  <%= yield %>
 
 
 
