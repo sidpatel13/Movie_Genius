@@ -13,8 +13,5 @@ end
 get '/comments/:id' do
 	@comment = Comment.find(params[:id])
 	@movie = @comment.line.movie
-
-
-
   erb :specific_comment
 end

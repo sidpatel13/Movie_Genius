@@ -3,7 +3,11 @@
 <ul>
 <% @user_movie.movies.first(10).each do |movie| %>
     <!-- <img src="<%= movie.poster %>"> -->
-    <li><%= movie.title %></li>
+    <li><%= movie.title %>
+      <form action="/add_movie" method="post">
+        <input type="hidden" name="movie_id" value="<%= movie.id %>">
+        <input type="submit" value="Add it!">
+      </form></li>
   <% end %>
 </ul>
 
