@@ -30,7 +30,7 @@
 					<td><%= comment.text %></td>
 					<td><a href="/movies/<%= comment.line.movie.id%>"><%= comment.line.movie.title %></a></td>
 					<td><%= comment.vote_count%></td>
-					<td><%= comment.user.username %></td>
+					<td><%= comment.user %></td>
 				</tr>
 			<% end %>
 
