@@ -6,10 +6,6 @@ meh = User.create(username:"molly", password:"1234q", email_address: "mary.huers
 	User.create(username: Faker::Internet.user_name, password: (rand(10).to_s + Faker::Lorem.word + rand(10).to_s), full_name: Faker::Name.name, email_address: Faker::Internet.free_email)
 end
 
-# user = User.create(username: "sidpatel", password: "password")
-# user.comments.create(text: "yo what it is" )
-
-
 a = Imdb::Movie.new("0075314") # Taxi Driver
 a_movie = Movie.create(title: a.title, synopsis: a.plot_synopsis)
 
