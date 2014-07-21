@@ -1,0 +1,15 @@
+
+<h3>Which one is the movie you want to show your genius on?</h3>
+	
+	<table>
+			<tr>
+				<th>Ur Movie? Click If Yes!</th>
+				<th>Check IMDB to be sure.</th>
+			</tr>
+		<% @movies.each do |movie|  %>
+			<tr>
+				<th><a href="/movies/new/<%= movie.imdb_id%>"><%= movie.title%></a></th>
+				<th><a href="<%= movie.url%>">Check the IMDB link!</a></th>
+			</tr>
+		<% end %>
+	</table>

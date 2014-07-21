@@ -66,6 +66,8 @@ GEM
       rack-test
       sinatra (~> 1.4.0)
       tilt (~> 1.3)
+    spotlite (0.8.2)
+      nokogiri (~> 1.6)
     thin (1.6.2)
       daemons (>= 1.0.9)
       eventmachine (>= 1.0.0)
@@ -91,4 +93,5 @@ DEPENDENCIES
   shotgun
   sinatra
   sinatra-contrib
+  spotlite
   thin
