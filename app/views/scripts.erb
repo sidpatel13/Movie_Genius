@@ -1,0 +1,5 @@
+<h3> These are the Scripts </h3>
+
+<% @scripts.each do |script| %>
+	<a href = "/scripts/<%= script.id %>"> <%= script.title %> </a> <br>	
+<% end %>
