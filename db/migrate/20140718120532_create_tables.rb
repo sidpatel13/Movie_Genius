@@ -25,5 +25,10 @@ class CreateTables < ActiveRecord::Migration
       t.timestamps
     end
 
+    create_table :scripts do |t|
+      t.text :title
+      t.text :plot
+      t.timestamps
+    end
   end
 end

@@ -94,6 +94,11 @@ a:hover {
 }
 
 
+pre {
+  width: 1000px;
+}
+
+
 table {
   margin-left: 50px;
   margin-top: 52px;
@@ -151,6 +156,7 @@ article {
   padding-left: 10px;
 }
 
+
 .commentsPage {
   text-align: center;
   padding-top: 1px;
@@ -174,7 +180,7 @@ textarea {
 
 .container {
   margin: 20px auto;
-  width: 600px;
+  width: 700px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
 }
